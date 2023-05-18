@@ -45,7 +45,9 @@ VBO对象的作用如下：
 
 ## 04 EBO（Element Buffer Object）</h2>
 
-EBO（Element Buffer Object）是OpenGL中用于存储索引数据的对象，用于指定绘制顶点的顺序。与VBO和VAO不同，EBO对象在配置完成后通常不需要解绑。
+EBO（Element Buffer Object）是OpenGL中用于*存储索引数据的对象*，用于指定绘制顶点的顺序。与VBO和VAO不同，EBO对象在配置完成后通常不需要解绑。
+
+因为存储索引对象，所以需要使用VBO存储顶点数据。
 
 以下是一些原因解释为什么EBO不需要解绑：
 
