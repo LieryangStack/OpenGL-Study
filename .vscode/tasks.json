@@ -1,0 +1,38 @@
+/*gcc编译设置*/
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc build active file",
+			"command": "/usr/bin/g++", /*使用Gcc命令编译*/
+			"args": [
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/${fileBasenameNoExtension}",
+				"/home/lieryang/Desktop/OpenGL-Study/glad/src/glad.c",
+				"-lglfw",
+				"-lGL", 
+				"-lX11", 
+				"-lpthread", 
+				"-lXrandr", 
+				"-lXi", 
+				"-ldl", 
+				"-I/home/lieryang/Desktop/OpenGL-Study/glad/include",
+				"-I/home/lieryang/Desktop/OpenGL-Study/09_my_shader"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true /*Ctrl+Shift+B快捷键是否启用*/
+			},
+			"detail": "compiler: /usr/bin/gcc"
+		}
+	]
+}
