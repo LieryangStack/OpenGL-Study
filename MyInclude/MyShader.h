@@ -1,3 +1,24 @@
+/**
+ * Copyright(C),2023-,Ltd.
+ * File name: MyShader.h
+ * Author: Lisibo
+ * Version: 1.0
+ * Date: June-1-2023
+ * Description: 顶点着色器、片段着色器程序加载，编译
+ *              创建着色器程序对象
+ * Others:
+ * Function List:
+ *  1.
+ *  2.
+ * History:
+ *  1.Date:
+ *    Author:
+ *    Modification:
+ *  2.Date:
+ *    Author:
+ *    Modification:
+ *  3....
+*/
 #ifndef __SHADER_H__
 #define __SHADER_H__
 

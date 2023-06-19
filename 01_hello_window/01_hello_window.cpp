@@ -1,3 +1,23 @@
+/**
+ * Copyright(C),2023-,Ltd.
+ * File name: 01_hello_window.cpp
+ * Author: lieryang
+ * Version: 1.0
+ * Date: June-1-2023
+ * Description: 
+ * Function List:
+ *  1.
+ *  2.
+ * History:
+ *  1.Date:
+ *    Author:
+ *    Modification:
+ *  2.Date:
+ *    Author:
+ *    Modification:
+ *  3....
+*/
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
@@ -27,6 +47,17 @@ processInput(GLFWwindow *window) {
 /**
  * 当用户改变窗口的大小的时候，视口也应该被调整。
  * 对窗口注册一个回调函数，它会在每次窗口大小被调整的时候被调用
+*/
+/**
+ * Function: 函数名称
+ * Description: 函数功能、性能等的描述
+ * Calls: 被本函数调用的函数清单
+ * Called By: 调用本函数的函数清单
+ * Table Accessed: 被访问的表（此项仅对于牵扯到数据库操作的程序）
+ * Table Updated: 被修改的表（此项仅对于牵扯到数据库操作的程序）
+ * Input: 输入参数说明，包括每个参数的作用、取值说明及参数间的关系。
+ * Return: 函数返回值的作用
+ * Others: 其它说明
 */
 void 
 framebuffer_size_callback(GLFWwindow* window, int width, int height) {
