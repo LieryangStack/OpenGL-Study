@@ -101,7 +101,13 @@ EBO（Element Buffer Object）是OpenGL中用于*存储索引数据的对象*，
 
 - **8 解绑VAO、VBO对象：** 调用glBindBuffer(GL_ARRAY_BUFFER, 0)和glBindVertexArray(0)
 
-- **9 绘制物体：** glUseProgram(shaderProgram);glBindVertexArray(VAO);someOpenGLFunctionThatDrawsOurTriangle();
+- **9 绘制物体：** 
+
+    glUseProgram(shaderProgram);
+
+   glBindVertexArray(VAO);
+    
+   someOpenGLFunctionThatDrawsOurTriangle();
 
 
 
