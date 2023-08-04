@@ -24,7 +24,7 @@
 ├── fragmentShader
 │   ├── 3.3.shader.fs
 │   └── shader.fs
-├── glad
+├── glad   /* GLAD是一个开源库，该库可以找到正确的函数并赋值给函数指针 */
 │   ├── include
 │   │   ├── glad
 │   │   │   └── glad.h
