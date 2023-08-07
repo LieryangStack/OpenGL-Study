@@ -43,7 +43,7 @@ void
 processInput(GLFWwindow *window) {
   /* 检查是否按下ESC键 */
   if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-      glfwSetWindowShouldClose(window, true);
+    glfwSetWindowShouldClose(window, true);
 }
 
 /**
@@ -88,9 +88,9 @@ main(int argc, char **argv) {
   // --------------------
   GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
   if (window == NULL) {
-      std::cout << "Failed to create GLFW window" << std::endl;
-      glfwTerminate();
-      return -1;
+    std::cout << "Failed to create GLFW window" << std::endl;
+    glfwTerminate();
+    return -1;
   }
   /* 通知glfw将我们窗口的上下文设置为当前线程的主上下文 */
   glfwMakeContextCurrent(window);
