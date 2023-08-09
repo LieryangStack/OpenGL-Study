@@ -177,7 +177,7 @@ main (int argc, char **argv) {
    *         arrays： 这是一个指向无符号整数数组的指针，用于接收生成的VAO对象的标识符。
   */
   glGenVertexArrays(1, &VAO);
-  
+
   /**
    * @brief: 是一个用于生成缓冲对象的OpenGL函数。
    *         缓冲对象用于存储和管理各种类型的数据，如顶点数据、索引数据、纹理数据等。
@@ -198,6 +198,7 @@ main (int argc, char **argv) {
    *         一旦绑定了缓冲对象，之后的数据操作和配置都会与该缓冲对象相关联。
   */
   glBindBuffer(GL_ARRAY_BUFFER, VBO);
+  
   /**
    * @brief: 配置缓冲对象，将数据传输到GPU中
    * 
