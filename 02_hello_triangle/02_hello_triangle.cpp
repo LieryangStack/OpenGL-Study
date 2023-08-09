@@ -80,6 +80,7 @@ main (int argc, char **argv) {
     glfwTerminate();
     return -1;
   }
+  /* 通知GLFW将我们窗口的上下文设置为当前线程的主上下文 */
   glfwMakeContextCurrent(window);
   glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
@@ -90,9 +91,7 @@ main (int argc, char **argv) {
     return -1;
   }
 
-  // build and compile our shader program
-  // ------------------------------------
-  // vertex shader
+  /* 顶点着色器 */
   /* 创建一个着色器对象，该对象通过ID来引用的 */
   unsigned int vertexShader = glCreateShader(GL_VERTEX_SHADER);
 
@@ -178,6 +177,7 @@ main (int argc, char **argv) {
    *         arrays： 这是一个指向无符号整数数组的指针，用于接收生成的VAO对象的标识符。
   */
   glGenVertexArrays(1, &VAO);
+  
   /**
    * @brief: 是一个用于生成缓冲对象的OpenGL函数。
    *         缓冲对象用于存储和管理各种类型的数据，如顶点数据、索引数据、纹理数据等。
@@ -186,6 +186,7 @@ main (int argc, char **argv) {
    *        buffers： 这是一个指向无符号整数数组的指针，用于接收生成的缓冲对象的标识符。
   */
   glGenBuffers(1, &VBO);
+
   /**
    * @brief: 函数将特定的VAO对象绑定到OpenGL的上下文中。
    *         一旦绑定了VAO对象，之后的顶点数据配置和操作都会与该VAO对象相关联
