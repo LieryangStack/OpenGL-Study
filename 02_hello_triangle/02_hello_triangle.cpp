@@ -27,8 +27,15 @@ void processInput(GLFWwindow *window);
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
+/**
+ * location = 0 ，其中的location可以显式地指定着色器程序中的输入和输出变量在内存布局中的位置
+ *                因为着色器程序是一个相对独立的程序，我们不能通过变量名来赋值变量值，
+ *                所以通过location标识内存的位置传递数据。
+ * glVertexAttribPointer 中第一个参数就是location变量的值
+ * glEnableVertexAttribArray 的参数也是location变量的值
+*/
 const char *vertexShaderSource = "#version 330 core\n"
-    "layout (location = 0) in vec3 aPos;\n"
+    "layout (location = 1) in vec3 aPos;\n"
     "void main()\n"
     "{\n"
     "   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
@@ -229,9 +236,9 @@ main (int argc, char **argv) {
    *                      它表示位置数据在缓冲中起始位置的偏移量(Offset)。
    *                      由于位置数据在数组的开头，所以这里是0
   */
-  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+  glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
   /* 以顶点属性位置值作为参数，启用顶点属性，使得GPU可以使用缓冲对象中的数据进行渲染。；顶点属性默认是禁用的 */
-  glEnableVertexAttribArray(0);
+  glEnableVertexAttribArray(1);
   /**
    * 当你将缓冲区对象设置为0,实际上是在解除绑定当前与指定目标关联的缓冲区对象。
    * 这样可以防止后续对此目标的无意识的修改，从而保护当前绑定的VBO数据
@@ -262,7 +269,7 @@ main (int argc, char **argv) {
     glBindVertexArray(VAO); 
     /**
      * 第一个参数是：OpenGL图元的类型。
-     * 第二个参数制定了顶点数组的起始索引，我们这里填0.
+     * 第二个参数指定了顶点数组的起始索引，我们这里填0.
      * 最后一个参数指定我们打算绘制多少个顶点，这里是3.
     */
     glDrawArrays(GL_TRIANGLES, 0, 3);
