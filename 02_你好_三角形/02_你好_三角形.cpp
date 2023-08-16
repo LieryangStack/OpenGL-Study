@@ -1,3 +1,23 @@
+/**
+ * Copyright(C),2023-,Ltd.
+ * File name: 02_你好_正方形.cpp
+ * Author: lieryang
+ * Version: 1.0
+ * Date: Aug-15-2023
+ * Description: 学习02_你好_三角形.md内容，绘制一个三角形
+ * Function List:
+ *  1.
+ *  2.
+ * History:
+ *  1.Date:
+ *    Author:
+ *    Modification:
+ *  2.Date:
+ *    Author:
+ *    Modification:
+ *  3....
+*/
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
@@ -271,9 +291,10 @@ main (int argc, char **argv) {
      * 第一个参数是：OpenGL图元的类型。
      * 第二个参数指定了顶点数组的起始索引，我们这里填0.
      * 最后一个参数指定我们打算绘制多少个顶点，这里是3.
+     * 或者 直接调用 glDrawArrays(GL_TRIANGLES, 0, 6);
     */
     glDrawArrays(GL_TRIANGLES, 0, 3);
-    glDrawArrays(GL_TRIANGLES, 3, 3);
+    glDrawArrays(GL_TRIANGLES, 3, 3);   
     // glBindVertexArray(0); // no need to unbind it every time 
 
     // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
