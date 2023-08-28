@@ -20,8 +20,7 @@
 				"-lXi", 
 				"-ldl", 
 				"-I/home/lieryang/Desktop/OpenGL-Study/glad/include",
-				"-I/home/lieryang/Desktop/OpenGL-Study/09_my_shader",
-				"-I/home/lieryang/Desktop/OpenGL-Study/10_texture"
+				"-I/home/lieryang/Desktop/OpenGL-Study/03_着色器"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
