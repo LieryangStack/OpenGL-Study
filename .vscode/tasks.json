@@ -11,7 +11,7 @@
 				"${file}",
 				"-o",
 				"${fileDirname}/${fileBasenameNoExtension}",
-				"/home/lieryang/Desktop/OpenGL-Study/glad/src/glad.c",
+				"${workspaceFolder}/src/glad.c",
 				"-lglfw",
 				"-lGL", 
 				"-lX11", 
@@ -19,8 +19,8 @@
 				"-lXrandr", 
 				"-lXi", 
 				"-ldl", 
-				"-I/home/lieryang/Desktop/OpenGL-Study/glad/include",
-				"-I/home/lieryang/Desktop/OpenGL-Study/03_着色器"
+				"-I${workspaceFolder}/include",
+				"-I${workspaceFolder}/03_着色器"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
