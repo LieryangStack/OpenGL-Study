@@ -19,6 +19,7 @@
 				"-lXrandr", 
 				"-lXi", 
 				"-ldl", 
+				"-I${workspaceFolder}",
 				"-I${workspaceFolder}/include",
 				"-I${workspaceFolder}/03_着色器"
 			],
